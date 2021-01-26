@@ -1,0 +1,84 @@
+function (modTable)
+    -- -------------------------------------------------------------------------
+    -- Configuration
+    -- -------------------------------------------------------------------------
+    -- Not all spells are caught by the Details lib. If you
+    -- want to add additional spells yourself to one of
+    -- the categories, do so below here in the format:
+    --
+    -- [spellId]="Spell name",
+    
+    
+    -- -------------------------------------------------------------------------
+    -- Add custom CC spells
+    -- -------------------------------------------------------------------------
+    local cc = {
+        [323673]="Mindgames",
+        [15487]="Silence",
+        [31935]="Avengers shield",
+        [305485]="Lightning lasso",
+        [5484]="howl of terror"
+    }
+    -- -------------------------------------------------------------------------
+    -- Add custom defensive buffs that should show
+    -- -------------------------------------------------------------------------
+    local defensives = {
+        [125174]="Touch of Karma",
+        [212295]="Nether ward",
+        [213602]="Greater Fade",
+        [210294]="Divine favor",
+        [23920]="Spell reflection",
+        [330279]="Overwatch (intervene spellreflect)",
+        [305497]="Thorns",
+        [1044]="Blessing of freedom",
+        [110909]="alter time",
+        
+    }
+    
+    -- -------------------------------------------------------------------------
+    -- Add custom offensive buffs that should show
+    -- -------------------------------------------------------------------------
+    local offensives = {
+        [102560]="Boomkin Incarnation",
+        [102543]="Feral Incarnation",
+        [31884]="Avenging wrath",
+        [315443]="Abomination limb"
+    }
+    
+    
+    -- -------------------------------------------------------------------------
+    -- Actual code
+    -- -------------------------------------------------------------------------
+    modTable.resize = function(self, scale)
+        local expectedW = math.floor(Plater.db.profile.aura_width * scale + 0.5)
+        local expectedH = math.floor(Plater.db.profile.aura_height * scale + 0.5)
+        local W, H = self:GetSize()
+        local currentW = math.floor(W + 0.5)
+        local currentH = math.floor(W + 0.5)
+        
+        
+        if not (currentW == expectedW) or not (currentW == expectedW) then
+            self:SetSize (expectedW, expectedH)
+            self.Icon:SetSize (expectedW-2, expectedH-2)
+            return true
+        end
+        return false
+    end 
+    
+    local mergeTable = function(first, second)
+        for k,v in pairs(second) do
+            first[k] = v 
+        end
+        return first
+    end
+    
+    modTable.ccTable = mergeTable(cc, DetailsFramework.CrowdControlSpells)
+    modTable.defTable = mergeTable(defensives, DetailsFramework.CooldownsAllDeffensive)
+    modTable.offTable = mergeTable(offensives, DetailsFramework.CooldownsAttack)
+    
+    modTable.debug = function(table)
+        for k,v in pairs(table) do
+            print( k, v )
+        end
+    end
+end
