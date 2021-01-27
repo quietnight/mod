@@ -13,39 +13,88 @@ function (modTable)
     -- Add custom CC spells
     -- -------------------------------------------------------------------------
     local cc = {
-        [323673]="Mindgames",
-        [15487]="Silence",
+        [108194]="Asphyxiate",
+        [179057]="Chaos Nova",
+        [211881]="Fel Eruption",
+        [5211]="Mighty Bash",
+        [3355]="Freezing Trap",
+        [119381]="Leg Sweep",
+        [853]="Hammer of Justice",
         [31935]="Avengers shield",
+        [8122]="Psychic Scream",
+        [64044]="Psychic Horror",
+        [15487]="Silence",
+        [323673]="Mindgames",
+        [408]="Kidney Shot",
+        [2094]="Blind",
         [305485]="Lightning lasso",
-        [5484]="howl of terror"
+        [80240]="Havoc",
+        [6789]="Mortal Coil",
+        [5484]="howl of terror",
+        [5246]="Intimidating Shout",
+        [107570]="Storm Bolt",
     }
+
     -- -------------------------------------------------------------------------
     -- Add custom defensive buffs that should show
     -- -------------------------------------------------------------------------
     local defensives = {
-        [125174]="Touch of Karma",
-        [212295]="Nether ward",
-        [213602]="Greater Fade",
-        [210294]="Divine favor",
-        [23920]="Spell reflection",
-        [330279]="Overwatch (intervene spellreflect)",
+        [77606]="Dark Simulacrum",
+        [48707]="Anti-Magic Shell",
+        [48792]="Icebound Fortitude",
+        [212800]="Blur",
+        [209426]="Darkness",
+        [22812]="Barkskin",
         [305497]="Thorns",
+        [61336]="Survival Instincts",
+        [102342]="Ironbark",
+        [186265]="Aspect of the Turtle",
+        [53480]="Roar of Sacrifice",
+        [45438]="Ice Block",
+        [110909]="Alter Time",
+        [198111]="Temporal Shield",
+        [243435]="Fortifying Brew",
+        [116849]="Life Cocoon",
+        [125174]="Touch of Karma",
+        [122783]="Diffuse Magic",
+        [210256]="Blessing of Sanctuary",
+        [210294]="Divine favor",
+        [498]="Divine Protection",
+        [642]="Divine Shield",
+        [184662]="Shield of Vengeance",
+        [6940]="Blessing of Sacrifice",
         [1044]="Blessing of freedom",
-        [110909]="alter time",
-        
+        [33206]="Pain Suppression",
+        [47585]="Dispersion",
+        [213602]="Greater Fade",
+        [31224]="Cloak of Shadows",
+        [8178]="Grounding Totem Effect",
+        [108271]="Astral Shift",
+        [104773]="Unending Resolve",
+        [212295]="Nether ward",
+        [23920]="Spell Reflection",
+        [330279]="Overwatch",
+        [118038]="Die by the Sword",
     }
     
     -- -------------------------------------------------------------------------
     -- Add custom offensive buffs that should show
     -- -------------------------------------------------------------------------
     local offensives = {
-        [102560]="Boomkin Incarnation",
-        [102543]="Feral Incarnation",
-        [31884]="Avenging wrath",
-        [315443]="Abomination limb"
+        -- [305392]="Chill Streak",
+        [315443]="Abomination Limb",
+        [102560]="Incarnation: Chosen of Elune",
+        [102543]="Incarnation: King of the Jungle",
+        [288613]="Trueshot",
+        [190319]="Combustion",
+        [31884]="Avenging Wrath",
+        [197871]="Dark Archangel",
+        [79140]="Vendetta",
+        [185422]="Shadow Dance",
+        [121471]="Shadow Blades",
+        [113858]="Dark Soul: Instability",
     }
-    
-    
+
     -- -------------------------------------------------------------------------
     -- Actual code
     -- -------------------------------------------------------------------------
