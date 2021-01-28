@@ -1,0 +1,14 @@
+function (self, unitId, unitFrame, envTable, modTable)
+    local _, instanceType = GetInstanceInfo()
+    local UnitIsUnit = UnitIsUnit
+    if instanceType == 'pvp' or instanceType == 'arena' then
+        local numOpps = GetNumArenaOpponentSpecs()
+        if (numOpps and numOpps > 0) then
+            for i = 1, numOpps do
+                if (UnitIsUnit(unitId, 'arena'..i)) then
+
+                end
+            end
+        end
+    end
+end
