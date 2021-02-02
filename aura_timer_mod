@@ -40,35 +40,32 @@ function (self, unitId, unitFrame, envTable)
     end
 end
 
-function (self, unitId, unitFrame, envTable)
-
+function (self, unitId, unitFrame, envTable, modTable)
+    --insert code here
     local auraContainers = {unitFrame.BuffFrame.PlaterBuffList}
-    
+
     if (Plater.db.profile.buffs_on_aura2) then
         auraContainers [2] = unitFrame.BuffFrame2.PlaterBuffList
     end
-    
+
     for containerID = 1, #auraContainers do
         local auraContainer = auraContainers [containerID]
         for index, auraIcon in ipairs (auraContainer) do
-            if (auraIcon:IsVisible()) then
-                local remainingTime = (auraIcon.startTime + auraIcon.duration - GetTime())
-                auraIcon.TimerText:SetFormattedText(Plater.FormatTime(remainingTime))
-                auraIcon.TimerText:SetFontColor(envTable.getColorByTime(remainingTime))
-            end
-            
-        end
-    end
-    
-    
-    for _, auraIcon in ipairs (unitFrame.ExtraIconFrame.IconPool) do
-        if auraIcon:IsShown() then
-            if (auraIcon:IsVisible()) then
-                local remainingTime = (auraIcon.startTime + auraIcon.duration - GetTime())
-                auraIcon.TimerText:SetFormattedText(Plater.FormatTime(remainingTime))
-                auraIcon.TimerText:SetFontColor(envTable.getColorByTime(remainingTime))
+            auraIcon.Cooldown.TimerBg = auraIcon.Cooldown:CreateTexture(nil, "BORDER")
+            auraIcon.Cooldown.TimerBg:SetColorTexture(0,0,0,.75)
+            auraIcon.Cooldown.TimerBg:ClearAllPoints()
+            auraIcon.Cooldown.TimerBg:SetPoint("CENTER", auraIcon.TimerText)
+            auraIcon.Cooldown.TimerBg:Hide()
+
+            if (auraIcon:IsShown()) then
+                local timerLabel = auraIcon.Cooldown.Timer
+
+                auraIcon.TimerText:SetFormattedText(Plater.FormatTime(auraIcon.RemainingTime))
+                Plater:SetFontColor (timerLabel, envTable.getColorByTime(auraIcon.RemainingTime, auraIcon.Duration))
+                auraIcon.Cooldown.TimerBg:SetWidth(auraIcon.TimerText:GetStringWidth())
+                auraIcon.Cooldown.TimerBg:SetHeight(auraIcon.TimerText:GetStringHeight())
+                auraIcon.Cooldown.TimerBg:Show()
             end
         end
     end
-    
 end
