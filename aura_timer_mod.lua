@@ -113,11 +113,11 @@ function (self, unitId, unitFrame, envTable, modTable)
         local auraContainer = auraContainers[containerID]
         for index, auraIcon in ipairs(auraContainer) do
             if (auraIcon.ExpirationTime and auraIcon.ExpirationTime > 0) then
-                auraIcon.TimerText:SetFormattedText(Plater.FormatTime(auraIcon.RemainingTime))
-                Plater:SetFontColor(auraIcon.TimerText, envTable.getColorByTime(auraIcon.RemainingTime, auraIcon.Duration))
+                auraIcon.Cooldown.Timer:SetFormattedText(Plater.FormatTime(auraIcon.RemainingTime))
+                Plater:SetFontColor(auraIcon.Cooldown.Timer, envTable.getColorByTime(auraIcon.RemainingTime, auraIcon.Duration))
 
-                auraIcon.Cooldown.durationBg:SetWidth(auraIcon.TimerText:GetStringWidth())
-                auraIcon.Cooldown.durationBg:SetHeight(auraIcon.TimerText:GetStringHeight())
+                auraIcon.Cooldown.durationBg:SetWidth(auraIcon.Cooldown.Timer:GetStringWidth())
+                auraIcon.Cooldown.durationBg:SetHeight(auraIcon.Cooldown.Timer:GetStringHeight())
                 auraIcon.Cooldown.durationBg:Show()
             end
         end
