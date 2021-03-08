@@ -10,89 +10,171 @@ function (modTable)
     
     
     -- -------------------------------------------------------------------------
-    -- Add custom CC spells
+    -- Add most important spells with huge icons.
     -- -------------------------------------------------------------------------
-    local cc = {
-        [108194]="Asphyxiate",
-        [179057]="Chaos Nova",
-        [211881]="Fel Eruption",
-        [5211]="Mighty Bash",
-        [3355]="Freezing Trap",
-        [119381]="Leg Sweep",
-        [853]="Hammer of Justice",
-        [31935]="Avenger's Shield",
-        [8122]="Psychic Scream",
-        [64044]="Psychic Horror",
-        [15487]="Silence",
-        [323673]="Mindgames",
-        [408]="Kidney Shot",
-        [2094]="Blind",
-        [305485]="Lightning Lasso",
-        [80240]="Havoc",
-        [6789]="Mortal Coil",
-        [5484]="Howl of Terror",
-        [5246]="Intimidating Shout",
-        [107570]="Storm Bolt",
-    }
+    local defaultLargeSpells = {
 
-    -- -------------------------------------------------------------------------
-    -- Add custom defensive buffs that should show
-    -- -------------------------------------------------------------------------
-    local defensives = {
-        [77606]="Dark Simulacrum",
+        -- DK
+        [108194]="Asphyxiate",
         [48707]="Anti-Magic Shell",
         [48792]="Icebound Fortitude",
-        [212800]="Blur",
+
+        -- Demon Hunter
+        [179057]="Chaos Nova",
+        [211881]="Fel Eruption",
         [209426]="Darkness",
+
+        -- Druid
+        [5211]="Mighty Bash",
         [22812]="Barkskin",
-        [305497]="Thorns",
         [61336]="Survival Instincts",
         [102342]="Ironbark",
-        [186265]="Aspect of the Turtle",
+
+        -- Hunter
+        [3355]="Freezing Trap",
         [53480]="Roar of Sacrifice",
+        [186265]="Aspect of the Turtle",
+
+        -- Mage
         [45438]="Ice Block",
-        [110909]="Alter Time",
-        [198111]="Temporal Shield",
-        [243435]="Fortifying Brew",
+
+        -- Monk
+        [119381]="Leg Sweep",
         [116849]="Life Cocoon",
-        [125174]="Touch of Karma",
         [122783]="Diffuse Magic",
-        [210256]="Blessing of Sanctuary",
-        [210294]="Divine favor",
+        [125174]="Touch of Karma",
+        [243435]="Fortifying Brew",
+
+        -- Paladin
+        [853]="Hammer of Justice",
         [498]="Divine Protection",
         [642]="Divine Shield",
         [184662]="Shield of Vengeance",
         [6940]="Blessing of Sacrifice",
-        [1044]="Blessing of freedom",
+
+        -- Priest
+        [8122]="Psychic Scream",
+        [15487]="Silence",
+        [64044]="Psychic Horror",
         [33206]="Pain Suppression",
         [47585]="Dispersion",
         [213602]="Greater Fade",
+
+        -- Rogue
+        [408]="Kidney Shot",
+        [2094]="Blind",
         [31224]="Cloak of Shadows",
-        [8178]="Grounding Totem Effect",
+
+        -- Shaman
+        [305485]="Lightning Lasso",
         [108271]="Astral Shift",
+
+        -- Warlock
+        [5484]="Howl of Terror",
+        [6789]="Mortal Coil",
         [104773]="Unending Resolve",
-        [212295]="Nether Ward",
+
+        -- Warrior
+        [5246]="Intimidating Shout",
+        [107570]="Storm Bolt",
         [23920]="Spell Reflection",
-        [330279]="Overwatch",
         [118038]="Die by the Sword",
+
+        ----
+        [23333]="Warsong Flag",
+        [23335]="Silverwing Flag",
+        [34976]="Netherstorm Flag",
+    }
+
+    -- -------------------------------------------------------------------------
+    -- Add semi-important spells with medium icons.
+    -- -------------------------------------------------------------------------
+    local defaultMediumSpells = {
+
+        -- DK
+        [305392]="Chill Streak",
+        [77606]="Dark Simulacrum",
+
+        -- Demon Hunter
+        [217832]="Imprison",
+        [209261]="Last Resort",
+
+        -- Druid
+        [33786]="Cyclone",
+        [78675]="Solar beam",
+        [102543]="Incarnation: King of the Jungle",
+        [102560]="Incarnation: Chosen of Elune",
+        [194223]="Celestial Alignment",
+        [1850]="Dash",
+        [77761]="Stampeding Roar",
+        [339]="Entangling Roots",
+        [102359]="Mass Entanglement",
+        [102793]="Ursol's Vortex",
+
+        -- Hunter
+        [213691]="Scatter Shot",
+        [288613]="Trueshot",
+
+        -- Mage
+        [118]="Polymorph",
+        [190319]="Combustion",
+        [82691]="Ring of frost",
+        [86949]="Cauterize",
+
+        -- Monk
+        [115078]="Paralysis",
+        [310454]="Weapons of Order",
+
+        -- Paladin
+        [20066]="Repentance",
+        [115750]="Blinding Light",
+        [31884]="Avenging Wrath",
+        [1022]="Blessing of Protection",
+        [1044]="Blessing of freedom",
+        [210256]="Blessing of Sanctuary",
+        [210294]="Divine favor",
+
+        -- Priest
+        [605]="Mind Control",
+        [88625]="Holy Word: Chastise",
+        [200183]="Apotheosis",
+        [323673]="Mindgames",
+
+        -- Rogue
+        [1833]="Cheap Shot",
+        [6770]="Sap",
+        [121471]="Shadow Blades",
+        [185422]="Shadow Dance",
+        [2983]="Sprint",
+        [31230]="Cheat Death",
+        [45182]="Cheating Death",
+        [212182]="Smoke Bomb",
+
+        -- Shaman
+        [51514]="Hex",
+        [2825]="Bloodlust",
+        [32182]="Heroism",
+        [8178]="Grounding Totem Effect",
+        [204288]="Earth Shield",
+
+        -- Warlock
+        [710]="Banish",
+        [5782]="Fear",
+        [6358]="Seduction",
+        [30283]="Shadowfury",
+        [113858]="Dark Soul: Instability",
+        [212295]="Nether Ward",
+
+        -- Warrior
+        [18499]="Berserker Rage",
+        [46924]="Bladestorm",
+        [107574]="Avatar",
     }
     
     -- -------------------------------------------------------------------------
-    -- Add custom offensive buffs that should show
+    -- Add spells that should show
     -- -------------------------------------------------------------------------
-    local offensives = {
-        -- [305392]="Chill Streak",
-        [315443]="Abomination Limb",
-        [102560]="Incarnation: Chosen of Elune",
-        [102543]="Incarnation: King of the Jungle",
-        [288613]="Trueshot",
-        [190319]="Combustion",
-        [31884]="Avenging Wrath",
-        [197871]="Dark Archangel",
-        [79140]="Vendetta",
-        [185422]="Shadow Dance",
-        [121471]="Shadow Blades",
-        [113858]="Dark Soul: Instability",
+    local defaultSpells = {
     }
 
     -- -------------------------------------------------------------------------
