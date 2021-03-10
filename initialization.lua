@@ -7,8 +7,8 @@ function (modTable)
     -- the categories, do so below here in the format:
     --
     -- [spellId]="Spell name",
-    
-    
+
+
     -- -------------------------------------------------------------------------
     -- Add most important spells with huge icons.
     -- -------------------------------------------------------------------------
@@ -170,7 +170,7 @@ function (modTable)
         [46924]="Bladestorm",
         [107574]="Avatar",
     }
-    
+
     -- -------------------------------------------------------------------------
     -- Add spells that should show
     -- -------------------------------------------------------------------------
@@ -180,33 +180,26 @@ function (modTable)
     -- -------------------------------------------------------------------------
     -- Actual code
     -- -------------------------------------------------------------------------
-    modTable.resize = function(self, scale)
+    modTable.resize = function(self, scale, size)
         local expectedW = math.floor(Plater.db.profile.aura_width * scale + 0.5)
         local expectedH = math.floor(Plater.db.profile.aura_height * scale + 0.5)
         local W, H = self:GetSize()
         local currentW = math.floor(W + 0.5)
         local currentH = math.floor(W + 0.5)
-        
-        
+
+
         if not (currentW == expectedW) or not (currentW == expectedW) then
             self:SetSize (expectedW, expectedH)
             self.Icon:SetSize (expectedW-2, expectedH-2)
+            Plater:SetFontSize(self.TimerText,size)
             return true
         end
         return false
-    end 
-    
-    local mergeTable = function(first, second)
-        for k,v in pairs(second) do
-            first[k] = v 
-        end
-        return first
     end
-    
-    modTable.ccTable = mergeTable(cc, DetailsFramework.CrowdControlSpells)
-    modTable.defTable = mergeTable(defensives, DetailsFramework.CooldownsAllDeffensive)
-    modTable.offTable = mergeTable(offensives, DetailsFramework.CooldownsAttack)
-    
+
+    modTable.largeSpellsTable = defaultLargeSpells
+    modTable.mediumSpellsTable = defaultMediumSpells
+
     modTable.debug = function(table)
         for k,v in pairs(table) do
             print( k, v )
