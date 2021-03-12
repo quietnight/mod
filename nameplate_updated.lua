@@ -34,6 +34,35 @@ function (self, unitId, unitFrame, envTable, modTable)
                         didResize = true
                     end
                 end
+
+                if  not auraIcon.Cooldown.durationBg then
+                    auraIcon.Cooldown.durationBg = auraIcon.Cooldown:CreateTexture(nil, "BORDER")
+                    auraIcon.Cooldown.durationBg:SetColorTexture(0,0,0,.50)
+
+                    auraIcon.Cooldown.durationBg:ClearAllPoints()
+                    auraIcon.Cooldown.durationBg:SetPoint("CENTER", auraIcon.Cooldown.Timer)
+
+                    auraIcon.Cooldown.durationBg:Hide()
+                end
+
+                if (auraIcon.ExpirationTime and auraIcon.ExpirationTime > 0) then
+                    auraIcon.Cooldown.Timer:SetFormattedText(Plater.FormatTime(auraIcon.RemainingTime))
+                    Plater:SetFontColor(auraIcon.Cooldown.Timer,envTable.getColorByTime(auraIcon.RemainingTime, auraIcon.Duration))
+
+                    auraIcon.Cooldown.durationBg:SetWidth(auraIcon.Cooldown.Timer:GetStringWidth())
+                    auraIcon.Cooldown.durationBg:SetHeight(auraIcon.Cooldown.Timer:GetStringHeight())
+                    auraIcon.Cooldown.durationBg:Show()
+
+                    auraIcon:SetAlpha(1)
+
+                    if (auraIcon.RemainingTime / (auraIcon.Duration + 0.01) ) < 0.2 and auraIcon.RemainingTime < 60 then --buff only has 20% timeleft and is less then 60 seconds.
+                        local f = GetTime() % 1
+                        if f > 0.5 then
+                            f = 1 - f
+                        end
+                        auraIcon:SetAlpha(f * 3)
+                    end
+                end
             end
         end
     end

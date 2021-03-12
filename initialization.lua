@@ -82,7 +82,7 @@ function (modTable)
 
         -- Warrior
         [5246]="Intimidating Shout",
-        [107570]="Storm Bolt",
+        [132169]="Storm Bolt",
         [118038]="Die by the Sword",
 
         ----
