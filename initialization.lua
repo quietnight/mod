@@ -16,16 +16,20 @@ function (modTable)
 
         -- DK
         [108194]="Asphyxiate",
+        [207167]="Blinding Sleet",
         [48707]="Anti-Magic Shell",
         [48792]="Icebound Fortitude",
+        [51052]="Anti-magic Zone",
 
         -- Demon Hunter
         [179057]="Chaos Nova",
         [211881]="Fel Eruption",
+        [198589]="Blur",
         [209426]="Darkness",
 
         -- Druid
         [5211]="Mighty Bash",
+        [203123]="Maim",
         [22812]="Barkskin",
         [61336]="Survival Instincts",
         [102342]="Ironbark",
@@ -33,6 +37,7 @@ function (modTable)
         -- Hunter
         [3355]="Freezing Trap",
         [53480]="Roar of Sacrifice",
+        [109304]="Exhilaration",
         [186265]="Aspect of the Turtle",
 
         -- Mage
@@ -41,8 +46,8 @@ function (modTable)
         -- Monk
         [119381]="Leg Sweep",
         [116849]="Life Cocoon",
+        [122470]="Touch of Karma",
         [122783]="Diffuse Magic",
-        [125174]="Touch of Karma",
         [243435]="Fortifying Brew",
 
         -- Paladin
@@ -58,6 +63,7 @@ function (modTable)
         [64044]="Psychic Horror",
         [33206]="Pain Suppression",
         [47585]="Dispersion",
+        [200183]="Apotheosis",
         [213602]="Greater Fade",
 
         -- Rogue
@@ -77,7 +83,6 @@ function (modTable)
         -- Warrior
         [5246]="Intimidating Shout",
         [107570]="Storm Bolt",
-        [23920]="Spell Reflection",
         [118038]="Die by the Sword",
 
         ----
@@ -92,33 +97,50 @@ function (modTable)
     local defaultMediumSpells = {
 
         -- DK
+        [334693]="Absolute Zero",
         [305392]="Chill Streak",
         [77606]="Dark Simulacrum",
 
         -- Demon Hunter
+        [200166]="Metamorphosis",
+        [202137]="Sigil of Silence",
+        [207685]="Sigil of Misery",
         [217832]="Imprison",
         [209261]="Last Resort",
 
         -- Druid
+        [99]="Incapacitating Roar",
+        [339]="Entangling Roots",
+        [2637]="Hibernate",
         [33786]="Cyclone",
+        [45334]="Immobilized",
+        -- [50259]="Dazed",
+        [61391]="Typhoon",
         [78675]="Solar beam",
+        [102359]="Mass Entanglement",
+        [102793]="Ursol's Vortex",
+        [163505]="Rake",
+        [236748]="Intimidating Roar",
         [102543]="Incarnation: King of the Jungle",
         [102560]="Incarnation: Chosen of Elune",
         [194223]="Celestial Alignment",
-        [1850]="Dash",
-        [77761]="Stampeding Roar",
-        [339]="Entangling Roots",
-        [102359]="Mass Entanglement",
-        [102793]="Ursol's Vortex",
+        -- [1850]="Dash",
+        -- [77761]="Stampeding Roar",
 
         -- Hunter
+        [19577]="Intimidation",
+        [162480]="Steel Trap",
+        [117405]="Binding Shot (trigger)",
+        [117526]="Binding Shot (triggered)",
+        [190927]="Harpoon",
         [213691]="Scatter Shot",
         [288613]="Trueshot",
 
         -- Mage
         [118]="Polymorph",
-        [190319]="Combustion",
+        [31661]="Dragon's Breath",
         [82691]="Ring of frost",
+        [190319]="Combustion",
         [86949]="Cauterize",
 
         -- Monk
@@ -136,39 +158,49 @@ function (modTable)
 
         -- Priest
         [605]="Mind Control",
-        [88625]="Holy Word: Chastise",
-        [200183]="Apotheosis",
+        [200196]="Holy Word: Chastise (debuff spellid)",
+        [200200]="Holy Word: Chastise (talent debuff spellid)",
+        [10060]="Power Infusion",
         [323673]="Mindgames",
 
         -- Rogue
+        [1776]="Gouge",
         [1833]="Cheap Shot",
         [6770]="Sap",
+        [79140]="Vendetta",
         [121471]="Shadow Blades",
         [185422]="Shadow Dance",
-        [2983]="Sprint",
+        -- [2983]="Sprint",
         [31230]="Cheat Death",
         [45182]="Cheating Death",
         [212182]="Smoke Bomb",
 
         -- Shaman
         [51514]="Hex",
+        [64695]="Earthgrab",
+        [197214]="Sundering",
         [2825]="Bloodlust",
         [32182]="Heroism",
+        [114050]="Ascendance",
+        [114051]="Ascendance",
+        [114052]="Ascendance",
+        [974]="Earth Shield",
         [8178]="Grounding Totem Effect",
-        [204288]="Earth Shield",
 
         -- Warlock
         [710]="Banish",
         [5782]="Fear",
-        [6358]="Seduction",
+        -- [6358]="Seduction",
         [30283]="Shadowfury",
         [113858]="Dark Soul: Instability",
+        [113860]="Dark Soul: Misery",
         [212295]="Nether Ward",
 
         -- Warrior
-        [18499]="Berserker Rage",
         [46924]="Bladestorm",
         [107574]="Avatar",
+        [18499]="Berserker Rage",
+        [23920]="Spell Reflection",
     }
 
     -- -------------------------------------------------------------------------
