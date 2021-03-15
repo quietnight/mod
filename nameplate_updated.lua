@@ -25,10 +25,10 @@ function (self, unitId, unitFrame, envTable, modTable)
                     if resize(auraIcon, modTable.config.largeScale, modTable.config.largeSize) then
                         didResize = true
                     end
-                elseif auraIcon.CanStealOrPurge then
-                    if resize(auraIcon, modTable.config.purgeable, durationSize) then
-                        didResize = true
-                    end
+                --elseif auraIcon.CanStealOrPurge then
+                --    if resize(auraIcon, modTable.config.purgeable, durationSize) then
+                --        didResize = true
+                --    end
                 else
                     if resize(auraIcon, 1, 10) then
                         didResize = true

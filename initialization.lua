@@ -29,6 +29,7 @@ function (modTable)
 
         -- Druid
         [5211]="Mighty Bash",
+        [33786]="Cyclone",
         [203123]="Maim",
         [22812]="Barkskin",
         [61336]="Survival Instincts",
@@ -41,6 +42,7 @@ function (modTable)
         [186265]="Aspect of the Turtle",
 
         -- Mage
+        [118]="Polymorph",
         [45438]="Ice Block",
 
         -- Monk
@@ -77,6 +79,7 @@ function (modTable)
 
         -- Warlock
         [5484]="Howl of Terror",
+        [5782]="Fear",
         [6789]="Mortal Coil",
         [104773]="Unending Resolve",
 
@@ -111,34 +114,31 @@ function (modTable)
         -- Druid
         [99]="Incapacitating Roar",
         [339]="Entangling Roots",
-        [2637]="Hibernate",
-        [33786]="Cyclone",
-        [45334]="Immobilized",
+        -- [2637]="Hibernate",
+        -- [45334]="Immobilized",
         -- [50259]="Dazed",
-        [61391]="Typhoon",
+        -- [61391]="Typhoon",
         [78675]="Solar beam",
         [102359]="Mass Entanglement",
         [102793]="Ursol's Vortex",
-        [163505]="Rake",
-        [236748]="Intimidating Roar",
+        -- [163505]="Rake",
+        -- [236748]="Intimidating Roar",
         [102543]="Incarnation: King of the Jungle",
         [102560]="Incarnation: Chosen of Elune",
         [194223]="Celestial Alignment",
-        -- [1850]="Dash",
+        [1850]="Dash",
         -- [77761]="Stampeding Roar",
 
         -- Hunter
         [19577]="Intimidation",
         [162480]="Steel Trap",
-        [117405]="Binding Shot (trigger)",
-        [117526]="Binding Shot (triggered)",
-        [190927]="Harpoon",
+        [117526]="Binding Shot",
+        -- [190927]="Harpoon",
         [213691]="Scatter Shot",
         [288613]="Trueshot",
 
         -- Mage
-        [118]="Polymorph",
-        [31661]="Dragon's Breath",
+        -- [31661]="Dragon's Breath",
         [82691]="Ring of frost",
         [190319]="Combustion",
         [86949]="Cauterize",
@@ -157,7 +157,7 @@ function (modTable)
         [210294]="Divine favor",
 
         -- Priest
-        [605]="Mind Control",
+        -- [605]="Mind Control",
         [200196]="Holy Word: Chastise (debuff spellid)",
         [200200]="Holy Word: Chastise (talent debuff spellid)",
         [10060]="Power Infusion",
@@ -170,26 +170,27 @@ function (modTable)
         [79140]="Vendetta",
         [121471]="Shadow Blades",
         [185422]="Shadow Dance",
-        -- [2983]="Sprint",
+        [2983]="Sprint",
         [31230]="Cheat Death",
         [45182]="Cheating Death",
         [212182]="Smoke Bomb",
 
         -- Shaman
         [51514]="Hex",
-        [64695]="Earthgrab",
-        [197214]="Sundering",
+        -- [64695]="Earthgrab",
+        -- [197214]="Sundering",
         [2825]="Bloodlust",
         [32182]="Heroism",
         [114050]="Ascendance",
         [114051]="Ascendance",
         [114052]="Ascendance",
+        [191634]="Stormkeeper",
+        [320125]="Echoing Shock",
         [974]="Earth Shield",
         [8178]="Grounding Totem Effect",
 
         -- Warlock
         [710]="Banish",
-        [5782]="Fear",
         -- [6358]="Seduction",
         [30283]="Shadowfury",
         [113858]="Dark Soul: Instability",
