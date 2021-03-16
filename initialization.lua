@@ -92,7 +92,7 @@ function (modTable)
 
         -- Warlock
         [5484]="Howl of Terror",
-        [5782]="Fear",
+        [118699]="Fear",
         [6789]="Mortal Coil",
         [104773]="Unending Resolve",
 
@@ -217,6 +217,11 @@ function (modTable)
         [107574]="Avatar",
         [18499]="Berserker Rage",
         [23920]="Spell Reflection",
+        [236077]="Disarm",
+
+        --
+        [331866]="Agent of Chaos",
+        [345231]="Gladiator's Emblem",
     }
 
     -- -------------------------------------------------------------------------
