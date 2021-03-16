@@ -30,8 +30,9 @@ function (modTable)
         -- Druid
         [5211]="Mighty Bash",
         [33786]="Cyclone",
-        [203123]="Maim",
+        [209753]="Cyclone",
         [22812]="Barkskin",
+        [29166]="Innervate",
         [61336]="Survival Instincts",
         [102342]="Ironbark",
 
@@ -43,6 +44,15 @@ function (modTable)
 
         -- Mage
         [118]="Polymorph",
+        [28271]="Polymorph Turtle",
+        [28272]="Polymorph Pig",
+        [61305]="Polymorph Black Cat",
+        [61721]="Polymorph Rabbit",
+        [126819]="Polymorph Porcupine",
+        [161353]="Polymorph Polar Bear Cub",
+        [161354]="Polymorph Monkey",
+        [277787]="Polymorph Direhorn",
+        [277792]="Polymorph Bumblebee",
         [45438]="Ice Block",
 
         -- Monk
@@ -60,6 +70,7 @@ function (modTable)
         [6940]="Blessing of Sacrifice",
 
         -- Priest
+        [605]="Mind Control",
         [8122]="Psychic Scream",
         [15487]="Silence",
         [64044]="Psychic Horror",
@@ -74,7 +85,9 @@ function (modTable)
         [31224]="Cloak of Shadows",
 
         -- Shaman
+        [51514]="Hex",
         [305485]="Lightning Lasso",
+        [8178]="Grounding Totem Effect",
         [108271]="Astral Shift",
 
         -- Warlock
@@ -105,37 +118,41 @@ function (modTable)
         [77606]="Dark Simulacrum",
 
         -- Demon Hunter
+        -- [187827]="Metamorphosis",
         [200166]="Metamorphosis",
-        [202137]="Sigil of Silence",
-        [207685]="Sigil of Misery",
+        -- [202137]="Sigil of Silence",
+        -- [205630]="Illidan's Grasp",
+        -- [207685]="Sigil of Misery",
         [217832]="Imprison",
-        [209261]="Last Resort",
+        -- [209261]="Last Resort",
 
         -- Druid
         [99]="Incapacitating Roar",
-        [339]="Entangling Roots",
         -- [2637]="Hibernate",
-        -- [45334]="Immobilized",
-        -- [50259]="Dazed",
-        -- [61391]="Typhoon",
-        [78675]="Solar beam",
-        [102359]="Mass Entanglement",
-        [102793]="Ursol's Vortex",
-        -- [163505]="Rake",
+        [163505]="Rake",
+        [203123]="Maim",
         -- [236748]="Intimidating Roar",
+        [33891]="Incarnation: Tree of Life",
         [102543]="Incarnation: King of the Jungle",
         [102560]="Incarnation: Chosen of Elune",
         [194223]="Celestial Alignment",
+        [339]="Entangling Roots",
+        -- [45334]="Immobilized",
+        -- [50259]="Dazed",
+        -- [61391]="Typhoon",
+        [102359]="Mass Entanglement",
+        [102793]="Ursol's Vortex",
         [1850]="Dash",
         -- [77761]="Stampeding Roar",
+        [78675]="Solar beam",
 
         -- Hunter
         [19577]="Intimidation",
-        [162480]="Steel Trap",
-        [117526]="Binding Shot",
-        -- [190927]="Harpoon",
         [213691]="Scatter Shot",
         [288613]="Trueshot",
+        [117526]="Binding Shot",
+        [162480]="Steel Trap",
+        -- [190927]="Harpoon",
 
         -- Mage
         -- [31661]="Dragon's Breath",
@@ -157,17 +174,16 @@ function (modTable)
         [210294]="Divine favor",
 
         -- Priest
-        -- [605]="Mind Control",
         [200196]="Holy Word: Chastise (debuff spellid)",
         [200200]="Holy Word: Chastise (talent debuff spellid)",
         [10060]="Power Infusion",
         [323673]="Mindgames",
 
         -- Rogue
-        [1776]="Gouge",
+        -- [1776]="Gouge",
         [1833]="Cheap Shot",
         [6770]="Sap",
-        [79140]="Vendetta",
+        -- [79140]="Vendetta",
         [121471]="Shadow Blades",
         [185422]="Shadow Dance",
         [2983]="Sprint",
@@ -176,18 +192,17 @@ function (modTable)
         [212182]="Smoke Bomb",
 
         -- Shaman
-        [51514]="Hex",
-        -- [64695]="Earthgrab",
-        -- [197214]="Sundering",
+        [197214]="Sundering",
         [2825]="Bloodlust",
         [32182]="Heroism",
+        [16166]="Master of the Elements",
         [114050]="Ascendance",
         [114051]="Ascendance",
         [114052]="Ascendance",
         [191634]="Stormkeeper",
         [320125]="Echoing Shock",
         [974]="Earth Shield",
-        [8178]="Grounding Totem Effect",
+        [64695]="Earthgrab",
 
         -- Warlock
         [710]="Banish",
