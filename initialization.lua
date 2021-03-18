@@ -86,6 +86,14 @@ function (modTable)
 
         -- Shaman
         [51514]="Hex",
+        [210873]="Hex (Compy)",
+        [211004]="Hex (Spider)",
+        [211010]="Hex (Snake)",
+        [211015]="Hex (Cockroach)",
+        [269352]="Hex (Skeletal Hatchling)",
+        [277778]="Hex (Zandalari Tendonripper)",
+        [277784]="Hex (Wicker Mongrel)",
+        [309328]="Hex (Living Honey)",
         [305485]="Lightning Lasso",
         [8178]="Grounding Totem Effect",
         [108271]="Astral Shift",
